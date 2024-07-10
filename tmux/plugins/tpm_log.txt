@@ -235,3 +235,25 @@
 [2024-07-09 19:17:05.135]	 Invoking /Users/bryansebaraj/.config/tmux/plugins/tpm/bin/clean_plugins all
 [2024-07-09 19:17:05.190]	 Done.
 
+[2024-07-09 23:58:38.339]	 List of discovered tpm plugins: tmux-plugins/tmux-cpu
+[2024-07-09 23:58:38.350]	 Invoking /Users/bryansebaraj/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-07-09 23:58:38.556]	 Already installed "tmux-cpu"
+[2024-07-09 23:58:38.567]	 Invoking /Users/bryansebaraj/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-07-09 23:58:38.724]	 Updating all plugins!
+[2024-07-09 23:58:38.724]	 
+[2024-07-09 23:58:39.030]	   "tmux-cpu" update success
+[2024-07-09 23:58:39.032]	     | Already up to date.
+[2024-07-09 23:58:39.043]	 Invoking /Users/bryansebaraj/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-07-09 23:58:39.097]	 Done.
+
+[2024-07-10 14:16:46.038]	 List of discovered tpm plugins: tmux-plugins/tmux-cpu
+[2024-07-10 14:16:46.050]	 Invoking /Users/bryansebaraj/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-07-10 14:16:46.268]	 Already installed "tmux-cpu"
+[2024-07-10 14:16:46.280]	 Invoking /Users/bryansebaraj/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-07-10 14:16:46.449]	 Updating all plugins!
+[2024-07-10 14:16:46.450]	 
+[2024-07-10 14:16:46.777]	   "tmux-cpu" update success
+[2024-07-10 14:16:46.780]	     | Already up to date.
+[2024-07-10 14:16:46.792]	 Invoking /Users/bryansebaraj/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-07-10 14:16:46.860]	 Done.
+

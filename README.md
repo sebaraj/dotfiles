@@ -1,0 +1,2 @@
+# dotfiles
+assert(emacs=='bad');
