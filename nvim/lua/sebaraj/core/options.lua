@@ -6,10 +6,10 @@ local keymap = vim.keymap
 opt.relativenumber = true
 opt.number = true
 
-opt.mouse = 'a'
+opt.mouse = "a"
 opt.showmode = false
 
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 opt.undofile = true
 opt.breakindent = true
@@ -26,7 +26,7 @@ opt.smartcase = true
 
 opt.wrap = false
 
-opt.signcolumn = 'yes'
+opt.signcolumn = "yes"
 
 opt.updatetime = 500
 opt.timeoutlen = 500
@@ -34,7 +34,7 @@ opt.timeoutlen = 500
 opt.splitright = true
 opt.splitbelow = true
 
-opt.inccommand = 'split'
+opt.inccommand = "split"
 opt.cursorline = true
 opt.scrolloff = 7
 
@@ -45,36 +45,3 @@ opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 
 opt.hlsearch = true
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

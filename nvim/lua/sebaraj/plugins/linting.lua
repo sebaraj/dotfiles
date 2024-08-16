@@ -11,8 +11,8 @@ return {
 			typescriptreact = { "eslint_d" },
 			python = { "pylint" },
 			java = { "checkstyle" },
-			go = { "golangci-lint" },
 		}
+		--go = { "golangci-lint" },
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 

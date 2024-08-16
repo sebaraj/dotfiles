@@ -24,6 +24,9 @@ return {
 				n = { "<cmd>Gitsigns next_hunk<cr>", "Next Hunk" },
 				p = { "<cmd>Gitsigns prev_hunk<cr>", "Previous Hunk" },
 			},
+			j = {
+				name = "Harpoon",
+			},
 			m = {
 				name = "Conform",
 			},

@@ -40,7 +40,7 @@ return {
 				"clangd",
 				"cmake",
 				"dockerls",
-				"gopls",
+				--"gopls",
 				"markdown_oxide",
 				"nginx_language_server",
 				"sqlls",
@@ -57,11 +57,10 @@ return {
 				"black",
 				"clang-format",
 				"google-java-format",
-				"gofumpt",
+				--"gofumpt",
 				"pylint",
 				"eslint_d",
 				"checkstyle",
-				"golangci-lint",
 			},
 		})
 
