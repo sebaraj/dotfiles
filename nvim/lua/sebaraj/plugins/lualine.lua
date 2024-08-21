@@ -24,8 +24,8 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = {},
-				lualine_c = { "diagnostics", "filename" },
-				lualine_x = { "diff", "encoding", "fileformat", "filetype" },
+				lualine_c = { { "filename", path = 1, shorting_target = 70 } },
+				lualine_x = { "branch", "diff", "diagnostics", "filetype" },
 				lualine_y = { { "progress", color = { bg = "#292e42" } } },
 				lualine_z = { "location" },
 			},
