@@ -44,4 +44,7 @@ opt.signcolumn = "yes"
 
 opt.backspace = "indent,eol,start"
 
+opt.whichwrap:append("<,>,h,l")
+-- opt.whichwrap:append(">,l")
+
 opt.hlsearch = true
