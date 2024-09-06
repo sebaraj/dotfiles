@@ -7,10 +7,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "sebaraj.plugins" }, { import = "sebaraj.plugins.lsp" } }, {
 	checker = {
-		enabled = true,
-		notify = false,
+		enabled = false,
+		notify = true,
+		frequency = 604800,
 	},
 	change_detection = {
-		notify = false,
+		enabled = true,
+		notify = true,
 	},
 })

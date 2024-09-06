@@ -10,7 +10,7 @@ return {
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			python = { "pylint" },
-			java = { "checkstyle" },
+			-- java = { "checkstyle" },
 		}
 		--go = { "golangci-lint" },
 

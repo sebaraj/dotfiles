@@ -1,5 +1,12 @@
 return {
 	"folke/which-key.nvim",
+	dependencies = {
+		"echasnovski/mini.icons",
+		"echasnovski/mini.nvim",
+		"nvim-tree/nvim-web-devicons",
+		"devicons/devicon",
+		"FortAwesome/Font-Awesome",
+	},
 	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
@@ -8,41 +15,16 @@ return {
 	opts = {},
 	config = function()
 		local wk = require("which-key")
-		wk.register({
-			s = {
-				name = "Search",
-			},
-			a = {
-				name = "Autosession",
-			},
-			c = {
-				name = "Code Action",
-				a = { "<cmd>CodeActionMenu<cr>", "Code Action" },
-			},
-			h = {
-				name = "Gitsigns",
-				n = { "<cmd>Gitsigns next_hunk<cr>", "Next Hunk" },
-				p = { "<cmd>Gitsigns prev_hunk<cr>", "Previous Hunk" },
-			},
-			j = {
-				name = "Harpoon",
-			},
-			m = {
-				name = "Conform",
-			},
-			r = {
-				name = "Rename/Restart",
-				s = { "<cmd>LspRestart<cr>", "Restart LSP" },
-			},
-			t = {
-				name = "Tab",
-			},
-			w = {
-				name = "Window",
-			},
-			x = {
-				name = "Trouble",
-			},
-		}, { prefix = "<leader>" })
+		wk.add({
+			{ "<leader>s", group = "Search" },
+			{ "<leader>c", group = "Code Action" },
+			{ "<leader>h", group = "Gitsigns" },
+			{ "<leader>j", group = "Harpoon" },
+			{ "<leader>m", group = "Conform" },
+			{ "<leader>r", group = "Rename/Restart" },
+			{ "<leader>t", group = "Tab" },
+			{ "<leader>w", group = "Window" },
+			{ "<leader>x", group = "Trouble" },
+		})
 	end,
 }

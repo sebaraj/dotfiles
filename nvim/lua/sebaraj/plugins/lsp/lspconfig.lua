@@ -18,7 +18,7 @@ return {
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap
 
-		mason.setup({
+		--[[ mason.setup({
 			ui = {
 				icons = {
 					package_installed = "✓",
@@ -26,9 +26,9 @@ return {
 					package_uninstalled = "✗",
 				},
 			},
-		})
+		}) ]]
 
-		mason_lspconfig.setup({
+		--[[ 	mason_lspconfig.setup({
 			ensure_installed = {
 				"tsserver",
 				"html",
@@ -63,7 +63,7 @@ return {
 				"checkstyle",
 			},
 		})
-
+ ]]
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
@@ -124,7 +124,7 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["lua_ls"] = function()
+			--[[ ["lua_ls"] = function()
 				lspconfig["lua_ls"].setup({
 					capabilities = capabilities,
 					settings = {
@@ -158,7 +158,7 @@ return {
 						bundles = {},
 					},
 				})
-			end,
+			end, ]]
 		})
 	end,
 }
