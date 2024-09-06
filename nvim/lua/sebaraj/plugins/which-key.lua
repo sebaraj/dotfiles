@@ -1,10 +1,7 @@
 return {
 	"folke/which-key.nvim",
 	dependencies = {
-		"echasnovski/mini.icons",
-		"echasnovski/mini.nvim",
 		"nvim-tree/nvim-web-devicons",
-		"devicons/devicon",
 		"FortAwesome/Font-Awesome",
 	},
 	event = "VeryLazy",
@@ -16,15 +13,18 @@ return {
 	config = function()
 		local wk = require("which-key")
 		wk.add({
-			{ "<leader>s", group = "Search" },
+
+			{ "<leader>s", group = "Search", icon = "\u{f0349}" },
 			{ "<leader>c", group = "Code Action" },
 			{ "<leader>h", group = "Gitsigns" },
-			{ "<leader>j", group = "Harpoon" },
+			{ "<leader>j", group = "Harpoon", icon = "󱡅" },
 			{ "<leader>m", group = "Conform" },
 			{ "<leader>r", group = "Rename/Restart" },
 			{ "<leader>t", group = "Tab" },
 			{ "<leader>w", group = "Window" },
 			{ "<leader>x", group = "Trouble" },
+			{ "<leader>/", icon = "\u{f0349}" },
+			{ "<leader> ", icon = "\u{f0349}" },
 		})
 	end,
 }
