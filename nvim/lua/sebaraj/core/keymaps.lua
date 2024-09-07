@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode w/ [jk]" })
+keymap.set("i", "nm", "<ESC>", { desc = "Exit insert mode w/ [nm]" })
 
 keymap.set("n", "<Esc>", "<cmd>nohl<CR>")
 

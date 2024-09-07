@@ -124,41 +124,6 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			--[[ ["lua_ls"] = function()
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
-					},
-				})
-			end,
-			["jdtls"] = function()
-				local jdtls_path = vim.fn.stdpath("data") .. "/mason/packages/jdtls/bin/jdtls"
-				lspconfig.jdtls.setup({
-					cmd = { jdtls_path },
-					root_dir = lspconfig.util.root_pattern(".git", "pom.xml", "build.gradle"),
-					settings = {
-						java = {
-							format = {
-								settings = {
-									url = vim.fn.expand("~/.local/share/eclipse/eclipse-java-google-style.xml"),
-									profile = "GoogleStyle",
-								},
-							},
-						},
-					},
-					init_options = {
-						bundles = {},
-					},
-				})
-			end, ]]
 		})
 	end,
 }

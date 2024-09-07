@@ -14,3 +14,16 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.formatoptions:append("t")
 	end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*",
+	callback = function()
+		-- Check if the current buffer is a floating window
+		if vim.bo.buftype == "nofile" then
+			local clients = vim.lsp.get_clients({ bufnr = 0 })
+			for _, client in ipairs(clients) do
+				vim.lsp.buf_detach_client(0, client.id)
+			end
+		end
+	end,
+})

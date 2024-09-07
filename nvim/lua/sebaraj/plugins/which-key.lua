@@ -1,10 +1,11 @@
 return {
 	"folke/which-key.nvim",
+	event = "VeryLazy",
 	dependencies = {
-		"nvim-tree/nvim-web-devicons",
+		{ "nvim-tree/nvim-web-devicons" },
 		"FortAwesome/Font-Awesome",
 	},
-	event = "VeryLazy",
+
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 300
