@@ -38,6 +38,7 @@ return {
 				-- "sqlls",
 				-- "rust_analyzer",
 				-- "jdtls",
+				"jsonls",
 			},
 		})
 

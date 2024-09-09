@@ -18,12 +18,12 @@ return {
 			},
 
 			ensure_installed = {
-				-- "json",
+				"json",
 				"javascript",
 				"typescript",
 				"tsx",
 				"yaml",
-				-- "html",
+				"html",
 				-- "css",
 				"markdown",
 				-- "markdown_inline",
@@ -40,7 +40,7 @@ return {
 				-- "java",
 				"python",
 				-- "regex",
-				"rust",
+				-- "rust",
 				"sql",
 			},
 			incremental_selection = {
