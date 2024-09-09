@@ -2,9 +2,9 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		dependencies = {
-			"rcarriga/nvim-dap-ui",
-			"leoluz/nvim-dap-go",
-			"https://github.com/nvim-neotest/nvim-nio",
+			{ "rcarriga/nvim-dap-ui" },
+			{ "leoluz/nvim-dap-go" },
+			{ "https://github.com/nvim-neotest/nvim-nio" },
 		},
 		config = function()
 			local dap = require("dap")
@@ -71,7 +71,7 @@ return {
 			)
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>de",
+				"<leader>dx",
 				[[<cmd>lua require'dap'.terminate()<CR>]],
 				{ noremap = true, silent = true }
 			)
