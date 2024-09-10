@@ -1,12 +1,13 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
+	event = "VeryLazy",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{
 			"github/copilot.vim",
 			config = function()
 				vim.g.copilot_no_tab_map = true
+				vim.g.copilot_assume_mapped = true
 				vim.api.nvim_set_keymap("i", "<C-c>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 			end,
 		},

@@ -1,6 +1,7 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
+		ft = { "go" },
 		dependencies = {
 			{ "rcarriga/nvim-dap-ui" },
 			{ "leoluz/nvim-dap-go" },
@@ -23,13 +24,13 @@ return {
 			)
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>do",
+				"'",
 				[[<cmd>lua require'dap'.step_over()<CR>]],
 				{ noremap = true, silent = true }
 			)
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>di",
+				";",
 				[[<cmd>lua require'dap'.step_into()<CR>]],
 				{ noremap = true, silent = true }
 			)
