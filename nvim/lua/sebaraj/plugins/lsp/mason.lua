@@ -36,7 +36,7 @@ return {
 				"markdown_oxide",
 				-- "nginx_language_server",
 				-- "sqlls",
-				-- "rust_analyzer",
+				"rust_analyzer",
 				-- "jdtls",
 				"jsonls",
 			},

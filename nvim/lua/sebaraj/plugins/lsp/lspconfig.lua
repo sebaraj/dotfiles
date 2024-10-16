@@ -17,6 +17,9 @@ return {
 		local mason_tool_installer = require("mason-tool-installer")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap
+		-- local on_attach = require("plugins.configs.lspconfig").on_attach
+		-- local capabilities = require("plugins.configs.lspconfig").capabilities
+		-- local util = require("lspconfig.util")
 
 		--[[ mason.setup({
 			ui = {
