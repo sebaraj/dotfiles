@@ -16,10 +16,46 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		local mason_tool_installer = require("mason-tool-installer")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		-- local base = require("plugins.configs.lspconfig")
+		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local on_attach = cmp_nvim_lsp.on_attach
+
 		local keymap = vim.keymap
 		-- local on_attach = require("plugins.configs.lspconfig").on_attach
 		-- local capabilities = require("plugins.configs.lspconfig").capabilities
 		-- local util = require("lspconfig.util")
+		--
+		-- lspconfig.rust_analyzer.setup({
+		-- capabilities = capabilities,
+		-- on_attach = on_attach,
+		-- cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+		-- })
+		lspconfig.rust_analyzer.setup({
+			capabilities = capabilities,
+			settings = {
+				["rust-analyzer"] = {
+					diagnostics = {
+						enable = true,
+					},
+				},
+			},
+		})
+
+		lspconfig.gopls.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			cmd = { "gopls" },
+			filetypes = { "go", "gomod", "gowork", "gotmpl" },
+		})
+
+		lspconfig.clangd.setup({
+			on_attach = function(client, bufnr)
+				client.server_capabilities.signatureHelpProvider = false
+				on_attach(client, bufnr)
+			end,
+			capabilities = capabilities,
+		})
 
 		--[[ mason.setup({
 			ui = {
@@ -66,7 +102,9 @@ return {
 				"checkstyle",
 			},
 		})
+
  ]]
+
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)

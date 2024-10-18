@@ -26,7 +26,11 @@ return {
 			},
 			sections = {
 				lualine_a = { { "mode", separator = { left = "", right = "" } } },
-				lualine_b = { { "branch", separator = { right = "" } }, "diff", "diagnostics" },
+				lualine_b = {
+					{ "branch", separator = { right = "" } },
+					{ "diff", separator = { left = "", right = "" } },
+					"diagnostics",
+				},
 				lualine_c = { { "filename", path = 1, shorting_target = 70 } },
 				lualine_x = {
 					{ "encoding", separator = { right = "|" } },

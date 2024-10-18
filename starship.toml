@@ -7,9 +7,9 @@ $git_state\
 $git_status\
 $git_metrics\
 $fill\
-$package $rust $nodejs $golang\
+$package$rust$nodejs$golang\
 $docker_context\
-$cmd_duration $jobs $time\
+$cmd_duration$jobs$time\
 $line_break\
 $character"""
 
@@ -17,21 +17,21 @@ add_newline = true
 
 
 [rust]
-format = '[$symbol($version)]($style)'
+format = '[$symbol($version)]($style) '
 symbol = " "
 
 [package]
 format = '[ $version](208 bold) '
 
 [golang]
-format = '[$symbol($version)]($style)  '
+format = '[$symbol($version)]($style) '
 symbol = ' '
 
 [nodejs]
-format = "[$symbol($version)]($style)"
+format = "[$symbol($version)]($style) "
 
 [docker_context]
-format = '[ $context](blue bold)'
+format = '[$context](blue bold) '
 
 [fill]
 symbol = " "
@@ -71,7 +71,7 @@ style = "bright-black"
 disabled = false
 
 [cmd_duration]
-format = "[$duration]($style)"
+format = "[$duration]($style) "
 style = "yellow"
 min_time = 1
 

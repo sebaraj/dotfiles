@@ -3,6 +3,8 @@ vim.cmd("let g:netrw_liststyle = 3")
 local opt = vim.opt
 local keymap = vim.keymap
 
+opt.pumheight = 10
+
 opt.relativenumber = true
 opt.number = true
 
