@@ -23,7 +23,12 @@ option_as_alt = "Both"
 [font]
 normal.family = "Hasklug Nerd Font"
 
-size = 15
+size = 16
+
+
+[shell]
+program = "/bin/zsh"
+args = ["-l"]
 
 
 

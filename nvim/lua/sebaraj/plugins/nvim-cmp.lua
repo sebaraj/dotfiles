@@ -22,10 +22,18 @@ return {
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
 	},
+	-- format = function(_, vim_item)
+	-- vim_item.menu = ""
+	-- vim_item.kind = ""
+	-- return vim_item
+	-- end,
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
+		local ELLIPSIS_CHAR = "…"
+		local MAX_LABEL_WIDTH = 20
+		local MIN_LABEL_WIDTH = 20
 
 		require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -49,7 +57,7 @@ return {
 			}),
 			window = {
 				completion = cmp.config.window.bordered({}),
-				documentation = cmp.config.window.bordered({}),
+				-- documentation = cmp.config.window.bordered({}),
 			},
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
@@ -57,13 +65,43 @@ return {
 				{ name = "buffer" },
 				{ name = "path" },
 			}),
-
+			-- formatting = {
+			-- 	format = function(entry, vim_item)
+			-- 		local label = vim_item.abbr
+			-- 		local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
+			-- 		if truncated_label ~= label then
+			-- 			vim_item.abbr = truncated_label .. ELLIPSIS_CHAR
+			-- 		elseif string.len(label) < MIN_LABEL_WIDTH then
+			-- 			local padding = string.rep(" ", MIN_LABEL_WIDTH - string.len(label))
+			-- 			vim_item.abbr = label .. padding
+			-- 		end
+			-- 		return vim_item
+			-- 	end,
+			-- },
+			--
+			-- formatting = {
+			-- 	format = function(entry, vim_item)
+			-- 		vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
+			-- 		return vim_item
+			-- 	end,
+			-- },
+			--
 			formatting = {
-				format = lspkind.cmp_format({
-					maxwidth = 50,
-					ellipsis_char = "...",
-				}),
+				expandable_indicator = false,
+				fields = { "abbr", "kind", "menu" },
+				format = function(_, vim_item)
+					vim_item.menu = ""
+					-- vim_item.kind = ""
+					return vim_item
+				end,
 			},
+
+			-- formatting = {
+			-- 	format = lspkind.cmp_format({
+			-- 		maxwidth = 50,
+			-- 		ellipsis_char = "...",
+			-- 	}),
+			-- },
 		})
 		vim.g.copilot_no_tab_map = true
 		vim.api.nvim_set_keymap("i", "<C-c>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

@@ -38,6 +38,11 @@ return {
 			"<cmd>Trouble qflist toggle<cr>",
 			desc = "Quickfix List (Trouble)",
 		},
+		{
+			"<leader>xt",
+			"<cmd>Trouble todo<cr>",
+			desc = "Todos (Trouble)",
+		},
 	},
 	-- keys = {
 	-- 	{ "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Open/close trouble list" },

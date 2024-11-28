@@ -7,14 +7,29 @@ $git_state\
 $git_status\
 $git_metrics\
 $fill\
-$package$rust$nodejs$golang\
-$docker_context\
+$cmake$package$rust$nodejs$golang$java\
+$aws$gcloud\
 $cmd_duration$jobs$time\
 $line_break\
 $character"""
 
 add_newline = true
 
+[java]
+format = '[$symbol($version)]($style) '
+symbol = ' '
+
+[aws]
+format = '[$symbol($profile )(\($region\))]($style) '
+symbol = '󰸏 '
+
+[gcloud]
+format = '[$symbol$account(@$domain)(\($region\))]($style) '
+symbol = '󱇶 '
+
+[cmake]
+format = '[$symbol($version)]($style) '
+symbol = '△ '
 
 [rust]
 format = '[$symbol($version)]($style) '
@@ -30,8 +45,8 @@ symbol = ' '
 [nodejs]
 format = "[$symbol($version)]($style) "
 
-[docker_context]
-format = '[$context](blue bold) '
+# [docker_context]
+# format = '[$context](blue bold) '
 
 [fill]
 symbol = " "

@@ -22,6 +22,10 @@ return {
 		local on_attach = cmp_nvim_lsp.on_attach
 
 		local keymap = vim.keymap
+
+		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+			border = "rounded",
+		})
 		-- local on_attach = require("plugins.configs.lspconfig").on_attach
 		-- local capabilities = require("plugins.configs.lspconfig").capabilities
 		-- local util = require("lspconfig.util")

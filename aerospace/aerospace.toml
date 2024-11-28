@@ -219,6 +219,10 @@ X = 'primary'
 9 = 'primary'
 
 
+# [[on-window-detected]]
+# run = 'focus --window-id '
+# run = 'focus --window-id <window-id>'
+
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Excel'
 run = 'move-node-to-workspace X' # mnemonics T - Terminal
