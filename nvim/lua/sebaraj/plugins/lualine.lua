@@ -7,8 +7,8 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "", right = "" }, -- Rounded corner separators
-				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" }, -- Rounded corner separators
+				section_separators = { left = "", right = "" },
 				-- component_separators = { left = "", right = "" },
 				-- section_separators = { left = "", right = "" },
 				disabled_filetypes = {
@@ -25,20 +25,20 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { { "mode", separator = { left = "", right = "" } } },
+				lualine_a = { { "mode", separator = { left = "", right = "" } } },
 				lualine_b = {
-					{ "branch", separator = { right = "" } },
-					{ "diff", separator = { left = "", right = "" } },
+					{ "branch", separator = { right = "" } },
+					{ "diff", separator = { left = "", right = "" } },
 					"diagnostics",
 				},
 				lualine_c = { { "filename", path = 1, shorting_target = 70 } },
 				lualine_x = {
-					{ "encoding", separator = { right = "|" } },
-					{ "fileformat", separator = { right = "|" } },
+					{ "encoding", separator = { right = "" } },
+					{ "fileformat", separator = { right = "" } },
 					"filetype",
 				},
 				lualine_y = { "progress" },
-				lualine_z = { { "location", separator = { left = "", right = "" } } },
+				lualine_z = { { "location", separator = { left = "", right = "" } } },
 			},
 			inactive_sections = {
 				lualine_a = {},
