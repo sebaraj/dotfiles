@@ -7,7 +7,7 @@ $git_state\
 $git_status\
 $git_metrics\
 $fill\
-$cmake$package$rust$nodejs$golang$java\
+$cmake$package$rust$nodejs$golang\ 
 $aws$gcloud\
 $cmd_duration$jobs$time\
 $line_break\

@@ -22,10 +22,12 @@ return {
 
 		mason_lspconfig.setup({
 			ensure_installed = {
+				"ts_ls",
+				"terraformls",
 				-- "tsconfig",
 				-- "html",
 				-- "cssls",
-				-- "tailwindcss",
+				"tailwindcss",
 				"lua_ls",
 				"pyright",
 				-- "bashls",
@@ -39,12 +41,13 @@ return {
 				"rust_analyzer",
 				-- "jdtls",
 				"jsonls",
+				"asm_lsp",
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				-- "prettier",
+				"prettier",
 				"stylua",
 				"isort",
 				"black",

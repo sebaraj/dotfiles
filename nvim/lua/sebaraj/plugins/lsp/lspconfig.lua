@@ -46,6 +46,11 @@ return {
 			},
 		})
 
+		lspconfig.terraformls.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+
 		lspconfig.gopls.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
@@ -58,6 +63,10 @@ return {
 				client.server_capabilities.signatureHelpProvider = false
 				on_attach(client, bufnr)
 			end,
+			capabilities = capabilities,
+		})
+		lspconfig.ts_ls.setup({
+			on_attach = on_attach,
 			capabilities = capabilities,
 		})
 
