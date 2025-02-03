@@ -2,7 +2,7 @@ return {
 	{
 		"stevearc/oil.nvim",
 		lazy = false,
-		dependencies = { { "nvim-tree/nvim-web-devicons", lazy = true } },
+		-- dependencies = { { "nvim-tree/nvim-web-devicons", lazy = true } },
 		config = function()
 			local oil = require("oil")
 			local util = require("oil.util")

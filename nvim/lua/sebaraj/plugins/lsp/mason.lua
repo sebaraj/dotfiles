@@ -42,6 +42,8 @@ return {
 				-- "jdtls",
 				"jsonls",
 				"asm_lsp",
+				"texlab",
+				"verible",
 			},
 		})
 

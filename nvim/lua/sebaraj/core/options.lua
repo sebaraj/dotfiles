@@ -50,3 +50,4 @@ opt.whichwrap:append("<,>,h,l")
 -- opt.whichwrap:append(">,l")
 
 opt.hlsearch = true
+
