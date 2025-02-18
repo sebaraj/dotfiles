@@ -226,3 +226,4 @@ X = 'primary'
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Excel'
 run = 'move-node-to-workspace X' # mnemonics T - Terminal
+

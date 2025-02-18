@@ -6,14 +6,15 @@ set nocompatible
 syntax on
 " set cursorline
 
-if !has('nvim')
-    let &t_SI = "\<esc>[6 q"
-    let &t_EI = "\<esc>[2 q"
-    if exists('&t_SR')
-        let &t_SR = "\<esc>[4 q"
-    endif
-    set t_Co=256
+let &t_SI = "\<esc>[6 q"
+let &t_EI = "\<esc>[2 q"
+if exists('&t_SR')
+    let &t_SR = "\<esc>[4 q"
 endif
+set t_Co=256
+
+set timeoutlen=200
+set ttimeoutlen=2
 
 set number
 set relativenumber
@@ -35,7 +36,6 @@ set nobackup
 set ignorecase smartcase
 
 set linebreak
-set showbreak=↪
 
 set wildmenu
 set wildmode=list:longest
@@ -84,5 +84,17 @@ set showmatch
 
 set hlsearch
 
+let mapleader = " "
 set history=1000
+map <leader>wv <C-w>v
+map <leader>wh <C-w>s
+map <leader>wx <cmd>close<CR>
+map <leader>we <C-w>=
+
+map - <cmd>w<CR><cmd>Ex<CR>
+map <leader><leader> <cmd>bro ol<CR>
+
+map <Esc> <cmd>nohl<CR>
+
+
 
