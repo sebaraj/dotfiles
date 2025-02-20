@@ -1,10 +1,12 @@
 set encoding=utf-8
-scriptencoding utf-8
+"scriptencoding utf-8
+
+nnoremap <esc>^[ <esc>^[
 
 set nocompatible
 
 syntax on
-" set cursorline
+set cursorline
 
 let &t_SI = "\<esc>[6 q"
 let &t_EI = "\<esc>[2 q"
@@ -51,8 +53,8 @@ colorscheme catppuccin_mocha
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText      ctermbg=NONE guibg=NONE
 highlight EndOfBuffer  ctermbg=NONE guibg=NONE
-highlight StatusLine ctermfg=white guifg=#ffffff ctermbg=NONE guibg=NONE
-highlight StatusLineNC ctermfg=white guifg=#666666 ctermbg=NONE guibg=NONE
+highlight StatusLine guifg=#CDD6F4 ctermbg=NONE guibg=NONE
+highlight StatusLineNC guifg=#666666 ctermbg=NONE guibg=NONE
 
 
 augroup TransparentBackground
@@ -64,19 +66,23 @@ augroup END
 
 augroup TransparentStatusLine
   autocmd!
-  autocmd ColorScheme * highlight StatusLine   ctermfg=white guifg=#ffffff ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight StatusLineNC ctermfg=white guifg=#666666 ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight StatusLine   guifg=#CDD6F4 ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight StatusLineNC guifg=#666666 ctermbg=NONE guibg=NONE
 augroup END
 
 
 set matchpairs+=<:>,「:」
 
 set termguicolors
-" colorscheme tango
 
 set laststatus=2
 
-set statusline=%<%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ %P
+set statusline=%f
+set statusline+=%{getbufvar(bufnr('%'),'&mod')?'[+]':''}
+set statusline+=%r
+set statusline+=\ %=
+set statusline+=%l/%L[%p%%]\ %c
+set statusline+=\ \%n\ 
 set showcmd
 set showmode
 
@@ -85,14 +91,14 @@ set showmatch
 set hlsearch
 
 let mapleader = " "
-set history=1000
+set history=100
 map <leader>wv <C-w>v
 map <leader>wh <C-w>s
 map <leader>wx <cmd>close<CR>
 map <leader>we <C-w>=
 
 map - <cmd>w<CR><cmd>Ex<CR>
-map <leader><leader> <cmd>bro ol<CR>
+nnoremap <leader><leader> :ls<CR>:call feedkeys(":b ", "n")<CR>
 
 map <Esc> <cmd>nohl<CR>
 
