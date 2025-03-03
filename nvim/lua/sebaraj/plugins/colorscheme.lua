@@ -11,9 +11,9 @@ return {
 		-- })
 		-- require("onedark").load()
 		-- local transparent = false
-		require("catppuccin").setup({
-			transparent_background = true,
-		})
+		-- require("catppuccin").setup({
+		-- 	transparent_background = true,
+		-- })
 
 		-- local bg = "#011628"
 		-- local bg_dark = "#011423"

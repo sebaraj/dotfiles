@@ -25,7 +25,15 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { { "mode", separator = { left = "", right = "" } } },
+				lualine_a = {
+					{
+						"mode",
+						fmt = function(str)
+							return str:sub(1, 1)
+						end,
+						separator = { left = "", right = "" },
+					},
+				},
 				lualine_b = {
 					{ "branch", separator = { right = "" } },
 					{ "diff", separator = { left = "", right = "" } },
