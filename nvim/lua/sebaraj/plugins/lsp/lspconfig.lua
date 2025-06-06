@@ -46,6 +46,7 @@ return {
 			},
 		})
 
+		local clangd_bin = vim.fn.exepath("clangd")
 		lspconfig.terraformls.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
@@ -59,6 +60,8 @@ return {
 		})
 
 		lspconfig.clangd.setup({
+			-- cmd = { "/opt/homebrew/Cellar/llvm/20.1.3/bin/clangd" },
+			cmd = { "clangd", "--compile-commands-dir=build" },
 			on_attach = function(client, bufnr)
 				client.server_capabilities.signatureHelpProvider = false
 				on_attach(client, bufnr)
