@@ -54,6 +54,7 @@ return {
 				"isort",
 				"black",
 				"clang-format",
+				"cpplint",
 				-- "google-java-format",
 				"gofumpt",
 				-- "golangci_lint_ls",
